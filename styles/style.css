@@ -1,5 +1,5 @@
 body {
-  background: #8aa;
+  background: #EDAB95;
   
 }
 
@@ -16,6 +16,13 @@ body {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 5em;
+}
+
+.location{
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 2em;
+  margin-top: .5em;
+  text-align: center;
 }
 
 .blurb {
