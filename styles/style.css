@@ -15,6 +15,7 @@ body {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 5em;
+  color: #fff;
 }
 
 .location {
@@ -30,6 +31,7 @@ body {
   margin-top: .5em;
   margin-left: .5em;
   text-align: left;
+  color: #fff;
 }
 
 .heading2 {
@@ -38,6 +40,7 @@ body {
   margin-top: .5em;
   margin-left: 1em;
   text-align: left;
+  color: #fff;
 }
 
 .body {
