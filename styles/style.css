@@ -4,9 +4,8 @@ body {
 }
 
 .content {
-  width:640px;
-  min-height:500px;
-  margin: 150px auto 0 auto;
+  min-height: 500px;
+  margin: 100px auto 100px auto;
   color: #fff;
 }
 
@@ -18,11 +17,37 @@ body {
   font-size: 5em;
 }
 
-.location{
+.location {
   font-family: 'Droid Sans', sans-serif;
   font-size: 2em;
   margin-top: .5em;
   text-align: center;
+}
+
+.heading1 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 2em;
+  margin-top: .5em;
+  margin-left: .5em;
+  text-align: left;
+}
+
+.heading2 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1em;
+  margin-top: .5em;
+  margin-left: 1em;
+  text-align: left;
+}
+
+.body {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1em;
+  margin-top: .5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: black;
+  line-height: 1.5;
 }
 
 .blurb {
