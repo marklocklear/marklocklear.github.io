@@ -29,7 +29,7 @@ body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 2em;
   margin-top: .5em;
-  margin-left: .5em;
+  margin-left: 5em;
   text-align: left;
   color: #fff;
 }
@@ -38,7 +38,7 @@ body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 1em;
   margin-top: .5em;
-  margin-left: 1em;
+  margin-left: 10em;
   text-align: left;
   color: #fff;
 }
@@ -47,8 +47,8 @@ body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 1em;
   margin-top: .5em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 10em;
+  margin-right: 10em;
   color: black;
   line-height: 1.5;
 }
