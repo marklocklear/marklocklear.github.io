@@ -1,6 +1,7 @@
 body {
-  background: #EDAB95;
-  
+  background-image: url('../images/me_2017.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .content {
