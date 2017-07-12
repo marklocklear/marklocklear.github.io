@@ -1,0 +1,77 @@
+body {
+  background-image: url('../images/me_2017_horz_opac.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (orientation:portrait) { background-image: url('../images/me_2017.jpg'); }
+.content {
+  min-height: 500px;
+  margin: 100px auto 100px auto;
+  color: #fff;
+}
+
+.name {
+  width: 100%;
+  opacity: .9;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 5em;
+  color: black;
+}
+
+.location {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 2.5em;
+  margin-top: .5em;
+  text-align: center;
+}
+
+.heading1 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 2em;
+  margin-top: .5em;
+  margin-left: 5em;
+  text-align: left;
+  color: grey;
+}
+
+.heading2 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1em;
+  margin-top: .5em;
+  margin-left: 10em;
+  text-align: left;
+  color: grey;
+}
+
+.body {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1em;
+  margin-top: .5em;
+  margin-left: 10em;
+  margin-right: 10em;
+  color: black;
+  line-height: 1.5;
+}
+
+.blurb {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.icons {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.icon {
+  opacity: .9;
+  padding: 20px;
+  height: 64px;
+}
+
+a {
+  text-decoration: none;
+}
