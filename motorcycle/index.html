@@ -1,194 +1,142 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Locklear.me - Motorcycles</title>
-  <meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
-  <meta name="author" content="Nathan Searles">
-
-  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
-  <meta name="viewport" content="width=device-width">
-  <!-- End SlidesJS Required -->
-
-  <!-- CSS for slidesjs.com example -->
-  <link rel="stylesheet" href="css/example.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <!-- End CSS for slidesjs.com example -->
-
-  <!-- SlidesJS Optional: If you'd like to use this design -->
-  <style>
-    body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #232525;
-      padding-top:70px;
-    }
-
-    #slides {
-      display: none
-    }
-
-    #slides .slidesjs-navigation {
-      margin-top:3px;
-    }
-
-    #slides .slidesjs-previous {
-      margin-right: 5px;
-      float: left;
-    }
-
-    #slides .slidesjs-next {
-      margin-right: 5px;
-      float: left;
-    }
-
-    .slidesjs-pagination {
-      margin: 6px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(img/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-  <!-- End SlidesJS Optional-->
-
-  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    #slides {
-      display: none
-    }
-
-    .container {
-      margin: 0 auto
-    }
-
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 1170px
-      }
-    }
-
-    :root {
-      --blur: 0px;
-      }
-
-    img {
-      filter: blur(var(--blur));
-    }
-
-  </style>
-  <!-- SlidesJS Required: -->
+  <meta charset="UTF-8">
+  <title>locklear.me - motorcycles</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
-  <!-- SlidesJS Required: Start Slides -->
-  <!-- The container is used to define the width of the slideshow -->
-  <div class="container">
-    <div id="slides">
-      <img src="img/cb550.jpg" alt="chopper">
-      <img src="img/750_chop.jpg" alt="chopper">
-      <img src="img/sr500.JPG" alt="chopper">
-      <img src="img/sohc_art.JPG" alt="chopper">
-      <img src="img/650n.jpg" alt="chopper">
-      <img src="img/6Fiddy.JPG" alt="chopper">
-      <img src="img/750chop2.JPG" alt="chopper">
-      <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
-    </div>
-  </div>
-  <!-- End SlidesJS Required: Start Slides -->
-
-  <!-- SlidesJS Required: Link to jQuery -->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <!-- End SlidesJS Required -->
-
-  <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="js/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
-
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528,
-        navigation: false
-      });
-    });
-
-    const input = document.querySelector('input#blur');
-
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  <style>
+    html {
+      box-sizing: border-box;
+      background:#ffc600;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+    body {
+      margin: 0;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
     }
 
-input.addEventListener('change', handleUpdate);
-input.addEventListener('mousemove', handleUpdate);
+    .panels {
+      min-height:100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .panel {
+      background:#6B0F9C;
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+      color:white;
+      text-align: center;
+      align-items:center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+      font-size: 20px;
+      background-size:cover;
+      background-position:center;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .cb750 { background-image:url(./img/750_chop.jpg); }
+    .cb550 { background-image:url(./img/cb550.jpg); }
+    .sohc_art { background-image:url(./img/sohc_art.jpg); }
+    .xs650 { background-image:url(./img/6fiddy.jpg); }
+    .sr500 { background-image:url(./img/sr500.jpg); }
+
+    /*flex children*/
+    .panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel > *:first-child { transform: translateY(-100%); }
+    .panel.open-active > *:first-child { transform: translateY(0); }
+    .panel > *:last-child { transform: translateY(100%); }
+    .panel.open-active > *:last-child { transform: translateY(0); }
+
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Amatic SC', cursive;
+      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }
+    .panel p:nth-child(2) {
+      font-size: 4em;
+    }
+
+    .panel.open {
+      font-size:40px;
+      flex: 5;
+    }
+
+  </style>
+
+
+  <div class="panels">
+    <div class="panel cb750">
+      <p>1978</p>
+      <p>CB750</p>
+      <p>Custom</p>
+    </div>
+    <div class="panel cb550">
+      <p>1976</p>
+      <p>CB550</p>
+      <p>Cafe</p>
+    </div>
+    <div class="panel sohc_art">
+      <p>Airbrushed</p>
+      <p>Logo</p>
+      <p>SOHC-4</p>
+    </div>
+    <div class="panel xs650">
+      <p>1976 Yamaha</p>
+      <p>xs650</p>
+      <p>Custom Bobber</p>
+    </div>
+    <div class="panel sr500">
+      <p>1981</p>
+      <p>SR500</p>
+      <p>Yamaha</p>
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      if(e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
   </script>
-  <!-- End SlidesJS Required -->
+
+
+
 </body>
 </html>
