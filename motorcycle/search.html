@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motorcycle Search 🏍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="Year, Make or Model">
+    <ul class="suggestions"></ul>
+  </form>
+  <center>Motorcycle Search DB based on data from <a href="https://github.com/marklocklear/bikez_scraper_node/blob/master/motorcycles.json">HERE</a></center></br>
+  <center>Special thanks to <a href="https://twitter.com/wesbos">da Bos</a> and Day 6 of <a href="https://javascript30.com/">Javascript 30</a></center>
+</center>
+<script>
+const endpoint = 'https://raw.githubusercontent.com/marklocklear/bikez_scraper_node/master/motorcycles.json';
+
+const motorcycles = [];
+
+fetch(endpoint)
+  .then(blob => blob.json())
+  .then(data => motorcycles.push(...data))
+
+function findMatches(wordToMatch, motorcycles) {
+  return motorcycles.filter(bike => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return bike.year.toString().match(regex) ||  bike.model.match(regex)
+  });
+}
+function displayMatches() {
+  const matchArray = findMatches(this.value, motorcycles);
+  const html = matchArray.map(bike=> {
+    const regex = new RegExp(this.value, 'gi');
+    const bike_year = bike.year.toString().replace(regex, `<span class="hl">${this.value}</span>`);
+    const bike_model = bike.model.replace(regex, `<span class="hl">${this.value}</span>`);
+    return`
+      <li>
+        <span class="name">${bike_year}, ${bike_model}, ${bike.make}</span>
+      </li>
+      `;
+  }).join('');
+  suggestions.innerHTML = html;
+}
+
+const searchInput = document.querySelector('.search');
+const suggestions= document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+</script>
+  </body>
+</html>
