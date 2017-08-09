@@ -29,6 +29,8 @@ function findMatches(wordToMatch, motorcycles) {
     return bike.year.toString().match(regex) ||  bike.model.match(regex)
   });
 }
+
+
 function displayMatches() {
   const matchArray = findMatches(this.value, motorcycles);
   const html = matchArray.map(bike=> {
@@ -47,9 +49,24 @@ function displayMatches() {
 const searchInput = document.querySelector('.search');
 const suggestions= document.querySelector('.suggestions');
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', debounce(displayMatches, 500));
+searchInput.addEventListener('keyup', debounce(displayMatches, 500));
 
+// debouce function
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
 </script>
   </body>
 </html>
