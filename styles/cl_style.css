@@ -4,6 +4,12 @@ body {
   background-repeat: no-repeat;
 }
 @media screen and (orientation:portrait) { background-image: url('../images/me_2017.jpg'); }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
 .content {
   min-height: 500px;
   margin: 100px auto 100px auto;
