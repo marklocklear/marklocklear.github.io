@@ -7,7 +7,7 @@ body {
 .content {
   min-height: 500px;
   margin: 100px auto 100px auto;
-  color: #fff;
+  color: #cb6b00;
 }
 
 .name {
@@ -16,7 +16,7 @@ body {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 5em;
-  color: #fff;
+  color: #cb6b00;
 }
 
 .location {
@@ -32,7 +32,7 @@ body {
   margin-top: .5em;
   margin-left: 5em;
   text-align: left;
-  color: #fff;
+  color: #cb6b00;
 }
 
 .heading2 {
@@ -41,7 +41,7 @@ body {
   margin-top: .5em;
   margin-left: 10em;
   text-align: left;
-  color: #fff;
+  color: #cb6b00;
 }
 
 .body {
@@ -70,6 +70,8 @@ body {
   opacity: .9;
   padding: 20px;
   height: 64px;
+  filter: brightness(50%) sepia(75) saturate(75) hue-rotate(25deg);
+
 }
 
 a {
