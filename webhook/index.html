@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    
+    <title>Mark Locklear</title>
+    
+    <link href='../styles/reset.css' rel='stylesheet' type='text/css'>
+    <link href='../styles/style.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <meta name="description" content="Homepage of Mark Locklear">
+    <meta name="keywords" content="Web Developer,Ruby on Rails,Ruby,Author,Technology,Lumbee,Mark Locklear">
+  </head>
+ 
+  <body>
+    <div class='content'>
+      <div class='blurb'>
+        <p>Enter info below</p>
+      </div>
+      
+<form id="my-form">
+    <input type="text" id="name" name="name" placeholder="Name" />
+    <input type="text" id="age" name="age" placeholder="Age" />
+    <input type="text" id="location" name="location" placeholder="Location" />
+    <input type="text" id="date" name="date" placeholder="Date" />
+
+    <button type="submit">Submit</button>
+</form>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    (function($){
+        function processForm( e ){
+            $.ajax({
+                url: 'https://hooks.zapier.com/hooks/catch/2366642/ob2ejqo/',
+                dataType: 'text',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                data: $(this).serialize(),
+                success: function( data, textStatus, jQxhr ){
+                    $('#response pre').html( data );
+                    console.log(data)
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+            });
+
+            e.preventDefault();
+        }
+
+        $('#my-form').submit( processForm );
+    })(jQuery);
+</script>
+  </body>
+</html>
