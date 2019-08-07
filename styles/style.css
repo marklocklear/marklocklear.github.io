@@ -71,7 +71,6 @@ body {
   padding: 20px;
   height: 64px;
   filter: brightness(50%) sepia(75) saturate(75) hue-rotate(25deg);
-
 }
 
 a {
@@ -83,5 +82,8 @@ a {
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
   transition: all .07s ease;
-
 }
+    #my-form {
+      padding: 20px;
+      text-align: center;
+    }

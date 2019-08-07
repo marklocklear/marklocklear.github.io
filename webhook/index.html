@@ -12,46 +12,50 @@
     <meta name="description" content="Homepage of Mark Locklear">
     <meta name="keywords" content="Web Developer,Ruby on Rails,Ruby,Author,Technology,Lumbee,Mark Locklear">
   </head>
- 
+
   <body>
     <div class='content'>
       <div class='blurb'>
-        <p>Enter info below</p>
+        <p>Zapier Web Hook</p>
       </div>
       
-<form id="my-form">
-    <input type="text" id="name" name="name" placeholder="Name" />
-    <input type="text" id="age" name="age" placeholder="Age" />
-    <input type="text" id="location" name="location" placeholder="Location" />
-    <input type="text" id="date" name="date" placeholder="Date" />
-
-    <button type="submit">Submit</button>
-</form>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-    (function($){
-        function processForm( e ){
-            $.ajax({
-                url: 'https://hooks.zapier.com/hooks/catch/2366642/ob2ejqo/',
-                dataType: 'text',
-                type: 'post',
-                contentType: 'application/x-www-form-urlencoded',
-                data: $(this).serialize(),
-                success: function( data, textStatus, jQxhr ){
-                    $('#response pre').html( data );
-                    console.log(data)
-                },
-                error: function( jqXhr, textStatus, errorThrown ){
-                    console.log( errorThrown );
-                }
-            });
-
-            e.preventDefault();
-        }
-
-        $('#my-form').submit( processForm );
-    })(jQuery);
-</script>
+    <form id="my-form">
+        Name:<br>
+        <input type="text" id="name" name="name" placeholder="Name" /><br>
+        Age:<br>
+        <input type="text" id="age" name="age" placeholder="Age" /><br>
+        Location:<br>
+        <input type="text" id="location" name="location" placeholder="Location" /><br>
+        Date:<br>
+        <input type="text" id="date" name="date" placeholder="Date" /><br>
+        <button type="submit">Submit</button>
+    </form>
+      <div class='blurb'>
+        <p>This submission will write to <a href="https://docs.google.com/spreadsheets/d/1bPNEAcxp7U5IQwETL4YcupdPdi5a7MDgmwwbusLkFlA/edit?usp=sharing" target="_blank">this spreadsheet</a>
+ if age > 17</p>
+      </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        (function($){
+            function processForm( e ){
+                $.ajax({
+                    url: 'https://hooks.zapier.com/hooks/catch/2366642/ob2ejqo/',
+                    dataType: 'text',
+                    type: 'post',
+                    contentType: 'application/x-www-form-urlencoded',
+                    data: $(this).serialize(),
+                    success: function( data, textStatus, jQxhr ){
+                        $('#response pre').html( data );
+                        console.log(data)
+                    },
+                    error: function( jqXhr, textStatus, errorThrown ){
+                        console.log( errorThrown );
+                    }
+                });
+                e.preventDefault();
+            }
+            $('#my-form').submit( processForm );
+        })(jQuery);
+    </script>
   </body>
 </html>
